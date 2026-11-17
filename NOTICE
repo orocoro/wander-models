@@ -1,0 +1,14 @@
+Wander model files
+
+DA3MetricLargeF16.mlpackage
+  A Core ML (mlprogram, Float16) conversion of Depth Anything 3 Metric-Large
+  (https://huggingface.co/depth-anything/DA3METRIC-LARGE,
+  revision 4010e39f3634a45bc60553321fb49fb760bd594e).
+  Depth Anything 3 is by ByteDance Seed and is licensed under the Apache License 2.0.
+  Copyright (c) ByteDance Ltd. and/or its affiliates.
+
+  Modifications: converted to Core ML with a fixed 504x378 input, ImageNet
+  normalisation folded into the model, camera head removed, the ViT position
+  embedding precomputed for that input size, weights stored as Float16.
+  Outputs: "depth" (canonical depth for a 300 px focal length; metres = depth * f / 300)
+  and "sky" (sky score; < 0.3 means not sky).
